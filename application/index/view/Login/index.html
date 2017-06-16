@@ -11,24 +11,31 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form method="post" action="">
+        <form method="post" action="checkLogin">
             <table>
                 <tr>
                     <th>手机号码:</th>
-                    <td><input type="text" name="telphone"></td>
+                    <td><input type="text" name="user_tel"></td>
                 </tr>
                 
                 <tr>
                     <th>密码:</th>
-                    <td><input type="password" name="password"></td>
+                    <td><input type="password" name="user_passwd"></td>
                 </tr>   
                 
                 <tr>
                     <td>
                         <input type="submit" value="登录">
+                        <input type="button" value="注册" onclick="locationRegister()">
                     </td>
                 </tr>
             </table>
         </form>
     </body>
 </html>
+
+<script>
+    function locationRegister(){
+        window.location.href = "{:Url('index/login/register')}"
+    }
+</script>

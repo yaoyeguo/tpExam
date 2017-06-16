@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>安全生产模拟考试平台-注册</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form method="post" action="checkRegister">
+    <table>
+        <tr>
+            <th>手机号码:</th>
+            <td><input type="text" name="user_tel"></td>
+        </tr>
+
+        <tr>
+            <th>密码:</th>
+            <td><input type="password" name="user_passwd"></td>
+        </tr>
+
+        <tr>
+            <th>确认密码:</th>
+            <td><input type="password" name="user_passwd_confirm"></td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" value="注册">
+                <input type="button" value="已有账号,去登录?" onclick="locationLogin()">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+
+<script>
+    function locationLogin(){
+        window.location.href = "{:Url('index/login/index')}"
+    }
+</script>

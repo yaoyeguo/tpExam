@@ -13,5 +13,10 @@
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
+
+//加载自定义配置文件
+$appConfigPath = APP_PATH.'app_config.php';
+if(file_exists($appConfigPath)) require $appConfigPath;
+
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';

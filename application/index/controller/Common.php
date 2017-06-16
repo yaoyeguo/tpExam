@@ -17,7 +17,7 @@ class Common extends Controller
     
     
     public function checkLogin(){
-        if(!isset($_SESSION['uid'])){
+        if(!Session::get('userInfo')){
             return $this->error('请登录', Url('Login/index'));
         }
     }
